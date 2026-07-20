@@ -554,12 +554,8 @@ body.nav-open .main-nav {
   grid-template-columns: 1fr;
 }
 @media (min-width: 800px) {
-  .footer-inner { grid-template-columns: 1.4fr 1fr 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
 }
-.footer-brand { display: flex; gap: 14px; }
-.footer-brand .brand-mark { fill: var(--lavender); margin-top: 2px; }
-.footer-business { color: var(--white); font-weight: 800; font-size: 16px; margin-bottom: 6px; }
-.footer-disclaimer { font-size: 13px; color: #a99fc9; margin: 0; }
 .footer-links-title {
   color: var(--white);
   font-weight: 700;

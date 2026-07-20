@@ -2,20 +2,15 @@
 // CONFIG — único lugar para actualizar datos del canal comercial
 // ============================================================
 const SITE_CONFIG = {
-  // TODO: reemplazar cuando definan el nombre comercial definitivo
-  businessName: 'Osmedica',
   // Link de WhatsApp Business (shortlink). Si en el futuro tenés el
   // número directo, podés cambiar a: `https://wa.me/549XXXXXXXXXX`
   whatsappLink: 'https://wa.me/message/7TRUIC3KWVNUL1',
 };
 
-// Reemplaza los placeholders __WHATSAPP_LINK__ y __BUSINESS_NAME__
-// insertados en el HTML, para que todo se controle desde acá.
+// Reemplaza el placeholder __WHATSAPP_LINK__ insertado en el HTML,
+// para que el link se controle desde acá.
 document.querySelectorAll('a[href="__WHATSAPP_LINK__"]').forEach((el) => {
   el.setAttribute('href', SITE_CONFIG.whatsappLink);
-});
-document.querySelectorAll('.business-name').forEach((el) => {
-  el.textContent = SITE_CONFIG.businessName;
 });
 
 // ============================================================

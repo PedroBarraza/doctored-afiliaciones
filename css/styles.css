@@ -390,6 +390,16 @@ body.nav-open .main-nav {
   text-transform: uppercase;
   letter-spacing: .03em;
 }
+.plan-highlight {
+  display: inline-block;
+  background: var(--sage);
+  color: var(--purple-dark);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  margin: 2px 0 10px;
+}
 .plan-card h3 { font-size: 20px; margin-bottom: 2px; }
 .plan-price {
   color: var(--purple);

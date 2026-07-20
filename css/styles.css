@@ -376,11 +376,14 @@ body.nav-open .main-nav {
 .plan-card--focus {
   border-color: var(--purple);
   background: linear-gradient(180deg, #ffffff 0%, #f6f1fc 100%);
+  padding-top: 42px;
 }
 .plan-badge {
   position: absolute;
   top: -12px;
-  left: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(100% - 44px);
   background: var(--purple);
   color: var(--white);
   font-size: 11px;
@@ -389,16 +392,7 @@ body.nav-open .main-nav {
   border-radius: 999px;
   text-transform: uppercase;
   letter-spacing: .03em;
-}
-.plan-highlight {
-  display: inline-block;
-  background: var(--sage);
-  color: var(--purple-dark);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 5px 12px;
-  border-radius: var(--radius-sm);
-  margin: 2px 0 10px;
+  text-align: center;
 }
 .plan-card h3 { font-size: 20px; margin-bottom: 2px; }
 .plan-price {

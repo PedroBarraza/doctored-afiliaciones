@@ -2,8 +2,8 @@
 // CONFIG — único lugar para actualizar datos del canal comercial
 // ============================================================
 const SITE_CONFIG = {
-  // Link directo a WhatsApp con el número del canal comercial.
-  whatsappLink: 'https://wa.me/54115601682',
+  // Link de WhatsApp Business (shortlink) del canal comercial.
+  whatsappLink: 'https://wa.me/message/WSFDIPK4M3NZD1',
 };
 
 // Reemplaza el placeholder __WHATSAPP_LINK__ insertado en el HTML,

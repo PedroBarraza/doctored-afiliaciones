@@ -464,6 +464,7 @@ body.nav-open .main-nav {
 }
 .clinics-track {
   display: flex;
+  align-items: center;
   width: max-content;
   gap: 14px;
   animation: clinics-scroll 22s linear infinite;

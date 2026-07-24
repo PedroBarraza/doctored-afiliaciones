@@ -468,7 +468,6 @@ body.nav-open .main-nav {
   gap: 14px;
   animation: clinics-scroll 22s linear infinite;
 }
-.clinics-marquee:hover .clinics-track { animation-duration: 90s; }
 @media (max-width: 700px) {
   .clinics-track { animation-duration: 12s; }
 }

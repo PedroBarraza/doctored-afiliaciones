@@ -449,6 +449,45 @@ body.nav-open .main-nav {
   font-weight: 800;
 }
 
+/* ---------- Clinics marquee ---------- */
+.clinics-caption {
+  text-align: center;
+  margin: 40px 0 18px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.clinics-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+.clinics-track {
+  display: flex;
+  width: max-content;
+  gap: 14px;
+  animation: clinics-scroll 28s linear infinite;
+}
+.clinics-marquee:hover .clinics-track { animation-play-state: paused; }
+.clinic-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--sage);
+  color: var(--purple-dark);
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+@keyframes clinics-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .clinics-track { animation: none; }
+}
+
 /* ---------- Comparison table ---------- */
 .table-wrap {
   overflow-x: auto;

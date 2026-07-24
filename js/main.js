@@ -64,28 +64,34 @@ if (quizCard) {
   const resultDescEl = document.getElementById('quiz-result-desc');
   const copyBtn = document.getElementById('quiz-copy');
   const restartBtn = document.getElementById('quiz-restart');
+  const whatsappBtn = document.getElementById('quiz-whatsapp');
 
   const answers = { q1: null, q2: null };
 
   const PLAN_INFO = {
     '500': {
       name: 'Plan 500',
+      short: 'Plan 500',
       desc: 'Se financia con el aporte que ya se descuenta de tu sueldo, sin costo mensual adicional. Requiere verificar que estés en relación de dependencia.',
     },
     '500+': {
       name: 'Plan 500+',
+      short: 'Plan 500+',
       desc: 'La misma cobertura y cartilla que el Plan 500, pero con una cuota mensual y sin necesitar relación de dependencia. Alta inmediata.',
     },
     '1000': {
       name: 'Plan 500 + upgrade a Plan 1000',
+      short: 'Plan 1000',
       desc: 'Arrancamos con el Plan 500 sin costo extra, y te mostramos cómo sumar más prestadores de guardia y descuentos en odontología con el Plan 1000.',
     },
     '2000': {
       name: 'Plan 500 + upgrade a Plan 2000',
+      short: 'Plan 2000',
       desc: 'Arrancamos con el Plan 500 sin costo extra, y te contamos cómo sumar habitación individual, implantes y asistencia al viajero con el Plan 2000.',
     },
     '3000': {
       name: 'Plan 500 + upgrade a Plan 3000',
+      short: 'Plan 3000',
       desc: 'Arrancamos con el Plan 500 sin costo extra, y te mostramos el Plan 3000: máxima cobertura, sin topes en estudios ni consultas.',
     },
   };
@@ -131,6 +137,10 @@ if (quizCard) {
     resultDescEl.textContent = plan.desc;
     quizCard.dataset.lastMessage =
       `Hola! Hice el test de la web y me recomendó el ${plan.name}. Quiero más info para afiliarme a DoctoRed.`;
+    if (whatsappBtn) {
+      const waMessage = `Hola me intereso el ${plan.short} quiero mas información porfavor`;
+      whatsappBtn.setAttribute('href', `${SITE_CONFIG.whatsappLink}?text=${encodeURIComponent(waMessage)}`);
+    }
     showStep('result');
   }
 

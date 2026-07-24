@@ -488,6 +488,7 @@ body.nav-open .main-nav {
   height: 56px;
   flex-shrink: 0;
 }
+.clinic-logo--lg { height: 78px; }
 .clinic-logo img {
   height: 100%;
   width: auto;

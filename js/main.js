@@ -62,7 +62,6 @@ if (quizCard) {
   };
   const resultPlanEl = document.getElementById('quiz-result-plan');
   const resultDescEl = document.getElementById('quiz-result-desc');
-  const copyBtn = document.getElementById('quiz-copy');
   const restartBtn = document.getElementById('quiz-restart');
   const whatsappBtn = document.getElementById('quiz-whatsapp');
 
@@ -135,27 +134,11 @@ if (quizCard) {
   function renderResult(plan) {
     resultPlanEl.textContent = plan.name;
     resultDescEl.textContent = plan.desc;
-    quizCard.dataset.lastMessage =
-      `Hola! Hice el test de la web y me recomendó el ${plan.name}. Quiero más info para afiliarme a DoctoRed.`;
     if (whatsappBtn) {
       const waMessage = `Hola me intereso el ${plan.short} quiero mas información porfavor`;
       whatsappBtn.setAttribute('href', `${SITE_CONFIG.whatsappLink}?text=${encodeURIComponent(waMessage)}`);
     }
     showStep('result');
-  }
-
-  if (copyBtn) {
-    copyBtn.addEventListener('click', async () => {
-      const message = quizCard.dataset.lastMessage || 'Hola! Quiero afiliarme a DoctoRed.';
-      try {
-        await navigator.clipboard.writeText(message);
-        copyBtn.textContent = '¡Copiado!';
-        setTimeout(() => { copyBtn.textContent = 'Copiar resumen para WhatsApp'; }, 2000);
-      } catch (err) {
-        // Fallback silencioso si el navegador bloquea el portapapeles
-        copyBtn.textContent = message;
-      }
-    });
   }
 
   if (restartBtn) {

@@ -480,6 +480,19 @@ body.nav-open .main-nav {
   font-size: 14px;
   white-space: nowrap;
 }
+.clinic-logo {
+  display: inline-flex;
+  align-items: center;
+  height: 56px;
+  flex-shrink: 0;
+}
+.clinic-logo img {
+  height: 100%;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
 @keyframes clinics-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }

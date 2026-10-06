@@ -10,6 +10,10 @@ const SITE_CONFIG = {
 // para que el link se controle desde acá.
 document.querySelectorAll('a[href="__WHATSAPP_LINK__"]').forEach((el) => {
   el.setAttribute('href', SITE_CONFIG.whatsappLink);
+  // Meta Pixel: registra el click a WhatsApp como evento de contacto.
+  el.addEventListener('click', () => {
+    if (typeof fbq === 'function') fbq('track', 'Contact');
+  });
 });
 
 // ============================================================
